@@ -1,0 +1,104 @@
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+  --darkBlue: hsl(234, 12%, 34%);
+  --grayBlue: hsl(229, 6%, 66%);
+  --lightBlue: hsl(0, 0%, 98%);
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--lightBlue);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.intro {
+  text-align: center;
+  margin: 50px 0 30px;
+}
+
+.intro h3 {
+  color: var(--grayBlue);
+  font-size: 28px;
+  font-weight: 200;
+}
+.intro h2 {
+  color: var(--darkBlue);
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.intro p {
+  color: var(--grayBlue);
+  width: 60%;
+  margin: auto;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: "start center end" "start  center2 end";
+  gap: 20px;
+}
+
+.cards .card {
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: 0 5px 10px var(--darkBlue);
+  max-width: 250px;
+  border-radius: 8px;
+}
+.cards .card .card-title {
+  font-weight: 600;
+  color: var(--darkBlue);
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.cards .card .card-description {
+  color: var(--grayBlue);
+}
+.cards .card .card-icon {
+  display: flex;
+  justify-content: right;
+}
+.cards .card .card-icon img {
+  width: 40px;
+  height: 40px;
+}
+.cards .card.super-visor {
+  border-top: 4px solid var(--cyan);
+  grid-area: start;
+  align-self: center;
+}
+.cards .card.team-builder {
+  border-top: 4px solid var(--red);
+  grid-area: center;
+  align-self: center;
+}
+
+.cards .card.karma {
+  border-top: 4px solid var(--orange);
+  grid-area: center2;
+}
+
+.cards .card.calc {
+  border-top: 4px solid var(--blue);
+  grid-area: end;
+  align-self: center;
+}
