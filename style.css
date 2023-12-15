@@ -58,10 +58,14 @@ body {
 
 .cards .card {
   background-color: #fff;
-  padding: 10px;
+  padding: 20px;
   box-shadow: 0 5px 10px var(--darkBlue);
-  max-width: 250px;
+  max-width: 300px;
+  min-height: 210px;
   border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .cards .card .card-title {
   font-weight: 600;
@@ -78,8 +82,8 @@ body {
   justify-content: right;
 }
 .cards .card .card-icon img {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
 }
 .cards .card.super-visor {
   border-top: 4px solid var(--cyan);
